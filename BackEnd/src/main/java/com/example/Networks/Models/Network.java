@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotEmpty;
 
 @Entity // This tells Hibernate to make a table out of this class
 public class Network {
@@ -11,16 +12,22 @@ public class Network {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
+    @NotEmpty(message = "type must not be empty")
     private String type;
 
-    private String shortdesc;
-
+    @NotEmpty(message = "material must not be empty")
     private String material;
 
+    @NotEmpty(message = "shortdesc must not be empty")
+    private String shortdesc;
+
+    @NotEmpty(message = "tech must not be empty")
     private String tech;
 
+    @NotEmpty(message = "owner must not be empty")
     private String owner;
 
+    @NotEmpty(message = "admin must not be empty")
     private String admin;
 
 
@@ -83,5 +90,6 @@ public class Network {
     public void setAdmin(String admin) {
         this.admin = admin;
     }
+
 
 }

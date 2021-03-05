@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
+import javax.validation.Valid;
+
 
 @RestController
 @CrossOrigin
@@ -19,7 +21,7 @@ public class ProviderController {
 	private ProviderRepository providerRepository;
 
 	@PostMapping(path="/add") // Map ONLY POST Requests
-	public @ResponseBody String addNewProvider (@RequestParam String name , @RequestParam String tin, @RequestParam String service
+	public @ResponseBody String addNewProvider (@Valid @RequestParam String name , @RequestParam String tin, @RequestParam String service
 			, @RequestParam String area , @RequestParam String type) {
 		// @ResponseBody means the returned String is the response, not a view name
 		// @RequestParam means it is a parameter from the GET or POST request

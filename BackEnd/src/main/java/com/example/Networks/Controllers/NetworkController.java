@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
+import javax.validation.Valid;
 
 @Controller
 @CrossOrigin
@@ -19,14 +20,14 @@ public class NetworkController {
     private NetworkRepository networkRepository;
 
     @PostMapping(path="/add") // Map ONLY POST Requests
-    public @ResponseBody String addNewNetwork (@RequestParam String type ,  @RequestParam String desc , @RequestParam String material , @RequestParam String tech , @RequestParam String owner ,
+    public @ResponseBody String addNewNetwork (@Valid @RequestParam String type ,  @RequestParam String shortdesc , @RequestParam String material , @RequestParam String tech , @RequestParam String owner ,
                                             @RequestParam String admin) {
         // @ResponseBody means the returned String is the response, not a view name
         // @RequestParam means it is a parameter from the GET or POST request
 
         Network n = new Network();
         n.setType(type);
-        n.setShortdesc(desc);
+        n.setShortdesc(shortdesc);
         n.setMaterial(material);
         n.setTech(tech);
         n.setOwner(owner);

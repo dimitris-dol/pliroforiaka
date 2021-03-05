@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotEmpty;
 
 @Entity // This tells Hibernate to make a table out of this class
 public class DataCenter {
@@ -11,16 +12,22 @@ public class DataCenter {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
 
+    @NotEmpty(message = "name must not be empty")
     private String name;
 
+    @NotEmpty(message = "shortdesc must not be empty")
     private String shortdesc;
 
+    @NotEmpty(message = "location must not be empty")
     private String location;
 
+    @NotEmpty(message = "type must not be empty")
     private String type;
 
+    @NotEmpty(message = "status must not be empty")
     private String status;
 
+    @NotEmpty(message = "operatingDate must not be empty")
     private String operatingDate;
 
 

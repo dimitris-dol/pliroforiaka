@@ -1,19 +1,19 @@
-com/example/Networks/Main/AccessingDataMysqlApplication.java
- com.example.Networks.AccessingDataMysqlApplication
+com/example/Networks/Models/DataCenter.java
+ com.example.Networks.DataCenter
 com/example/Networks/Repos/ProviderRepository.java
  com.example.Networks.ProviderRepository
 com/example/Networks/Controllers/ProviderController.java
  com.example.Networks.ProviderController
 com/example/Networks/Repos/DataCenterRepository.java
  com.example.Networks.DataCenterRepository
-com/example/Networks/Models/Provider.java
- com.example.Networks.Provider
-com/example/Networks/Repos/NetworkRepository.java
- com.example.Networks.NetworkRepository
-com/example/Networks/Models/DataCenter.java
- com.example.Networks.DataCenter
 com/example/Networks/Models/Network.java
  com.example.Networks.Network
+com/example/Networks/Repos/NetworkRepository.java
+ com.example.Networks.NetworkRepository
+com/example/Networks/Main/AccessingDataMysqlApplication.java
+ com.example.Networks.AccessingDataMysqlApplication
+com/example/Networks/Models/Provider.java
+ com.example.Networks.Provider
 com/example/Networks/Controllers/DataCenterController.java
  com.example.Networks.DataCenterController
 com/example/Networks/Controllers/NetworkController.java

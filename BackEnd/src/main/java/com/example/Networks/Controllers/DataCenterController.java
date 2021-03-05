@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
+import javax.validation.Valid;
 
 @Controller
 @CrossOrigin
@@ -19,14 +20,14 @@ public class DataCenterController {
     private DataCenterRepository dataCenterRepository;
 
     @PostMapping(path="/add") // Map ONLY POST Requests
-    public @ResponseBody String addNewDataCenter (@RequestParam String name , @RequestParam String desc, @RequestParam String location
+    public @ResponseBody String addNewDataCenter (@Valid @RequestParam String name , @RequestParam String shortdesc, @RequestParam String location
             , @RequestParam String type , @RequestParam String status , @RequestParam String operatingDate) {
         // @ResponseBody means the returned String is the response, not a view name
         // @RequestParam means it is a parameter from the GET or POST request
 
         DataCenter n = new DataCenter();
         n.setName(name);
-        n.setShortdesc(desc);
+        n.setShortdesc(shortdesc);
         n.setLocation(location);
         n.setType(type);
         n.setStatus(status);
