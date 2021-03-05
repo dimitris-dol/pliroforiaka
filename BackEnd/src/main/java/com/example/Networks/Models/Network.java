@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
+import org.springframework.scheduling.annotation.Async;
 
 @Entity // This tells Hibernate to make a table out of this class
 public class Network {
