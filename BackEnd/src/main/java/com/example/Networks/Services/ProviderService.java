@@ -13,14 +13,6 @@ public class ProviderService {
     @Async
     public void print(String name, String tin, String service, String area, String type) {
 
-        if(name.equals("") || tin.equals("") || service.equals("") || area.equals("") || type.equals("")) {
-
-            int a = 1;
-            int b = 0;
-            int c = 0;
-            c = a / b; //fake exception
-        }
-        else {
             Provider n = new Provider();
             n.setName(name);
             n.setTin(tin);
@@ -29,7 +21,7 @@ public class ProviderService {
             n.setType(type);
             providerRepository.save(n);
             System.out.println("Saved");
-        }
+
     }
 
 }

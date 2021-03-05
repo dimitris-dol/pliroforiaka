@@ -13,14 +13,6 @@ public class NetworkService {
     @Async
     public void print(String type, String shortdesc, String material, String tech, String owner, String admin) {
 
-        if(type.equals("") || shortdesc.equals("") || material.equals("") || tech.equals("") || owner.equals("") || admin.equals("")) {
-
-            int a = 1;
-            int b = 0;
-            int c = 0;
-            c = a / b; //fake exception
-        }
-        else {
             Network n = new Network();
             n.setType(type);
             n.setShortdesc(shortdesc);
@@ -30,7 +22,7 @@ public class NetworkService {
             n.setAdmin(admin);
             networkRepository.save(n);
             System.out.println("saved");
-        }
+
     }
 
 }

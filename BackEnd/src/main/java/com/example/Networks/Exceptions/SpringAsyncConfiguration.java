@@ -32,7 +32,7 @@ public class SpringAsyncConfiguration implements AsyncConfigurer {
                     System.out.println("Parameter value             : " + param);
                 }
                 System.out.println("stack Trace ");
-                ex.printStackTrace();
+               // ex.printStackTrace();
             }
 
         };

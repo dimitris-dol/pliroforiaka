@@ -13,14 +13,6 @@ public class DataCenterService {
     @Async
     public void print(String name, String shortdesc, String location, String type, String status, String operatingDate) {
 
-        if(name.equals("") || shortdesc.equals("") || location.equals("") || type.equals("") || status.equals("") || operatingDate.equals("")) {
-
-            int a = 1;
-            int b = 0;
-            int c = 0;
-            c = a / b; //fake exception
-        }
-        else {
             DataCenter n = new DataCenter();
             n.setName(name);
             n.setShortdesc(shortdesc);
@@ -30,7 +22,7 @@ public class DataCenterService {
             n.setOperatingDate(operatingDate);
             dataCenterRepository.save(n);
             System.out.println("Saved");
-        }
+
     }
 
 }
