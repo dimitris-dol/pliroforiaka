@@ -11,7 +11,12 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
-import com.example.Networks.CustomException;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
 
 
 @RestController
@@ -23,15 +28,38 @@ public class NetworkInputController {
 
     @RequestMapping(value = "/netinput")
     public String input() {
-        String[] type = {"a","aa","a","a","a","","a","","a","a" };  // tha antikatastathei me json read
-        String[] shortdesc = {"aasd","","asda","a","aa","ss","asdsd","","a","a" };
-        String[] material = {"a","","a","a","a","","a","","a","a" };
-        String[] tech = {"a","","abfghf","a1","a","","afff","","a","a" };
-        String[] owner = {"a","","a","a","afghfgh","","af","","asssds","a" };
-        String[] admin = {"a123","","afghhgf","a","a","","a","","a","a" };
-            for(int i=0; i<10; i++) {
-                networkService.print(type[i], shortdesc[i], material[i], tech[i], owner[i], admin[i]);
+
+        String fileName= "C:\\Users\\jimmd\\IdeaProjects\\Networks\\BackEnd\\src\\main\\java\\com\\example\\Networks\\Files\\networks.csv";
+        File file= new File(fileName);
+
+        // this gives you a 2-dimensional array of strings
+        List<List<String>> lines = new ArrayList<>();
+        Scanner inputStream;
+
+        try{
+            inputStream = new Scanner(file);
+
+            while(inputStream.hasNext()){
+                String line= inputStream.next();
+                String[] values = line.split(",");
+                // this adds the currently parsed line to the 2-dimensional string array
+                lines.add(Arrays.asList(values));
             }
+
+            inputStream.close();
+        }catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        List<String> type = lines.get(0);
+        List<String> shortdesc = lines.get(1);
+        List<String> material = lines.get(2);
+        List<String> tech = lines.get(3);
+        List<String> owner = lines.get(4);
+        List<String> admin = lines.get(5);
+        for(int i=0; i<10; i++) {
+            networkService.print(type.get(i), shortdesc.get(i), material.get(i), tech.get(i), owner.get(i), admin.get(i));
+        }
         return "Jason file for Networks parsed to database";
     }
 }

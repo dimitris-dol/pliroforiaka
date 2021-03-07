@@ -11,7 +11,12 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
-import com.example.Networks.CustomException;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
 
 
 @RestController
@@ -23,13 +28,36 @@ public class ProviderInputController {
 
     @RequestMapping(value = "/provinput")
     public String input() {
-        String[] name = {"a","aa","a","a","a","","a","","a","a" };  // tha antikatastathei me json read
-        String[] tin = {"aasd","","asda","a","aa","ss","asdsd","","a","a" };
-        String[] service = {"a","","a","a","a","","a","","a","a" };
-        String[] area = {"a","","abfghf","a1","a","","afff","","a","a" };
-        String[] type = {"a","","a","a","afghfgh","","af","","asssds","a" };
+
+        String fileName= "C:\\Users\\jimmd\\IdeaProjects\\Networks\\BackEnd\\src\\main\\java\\com\\example\\Networks\\Files\\providers.csv";
+        File file= new File(fileName);
+
+        // this gives you a 2-dimensional array of strings
+        List<List<String>> lines = new ArrayList<>();
+        Scanner inputStream;
+
+        try{
+            inputStream = new Scanner(file);
+
+            while(inputStream.hasNext()){
+                String line= inputStream.next();
+                String[] values = line.split(",");
+                // this adds the currently parsed line to the 2-dimensional string array
+                lines.add(Arrays.asList(values));
+            }
+
+            inputStream.close();
+        }catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        List<String> name = lines.get(0);
+        List<String> tin = lines.get(1);
+        List<String> service = lines.get(2);
+        List<String> area = lines.get(3);
+        List<String> type = lines.get(4);
         for(int i=0; i<10; i++) {
-            providerService.print(name[i], tin[i], service[i], area[i], type[i]);
+            providerService.print(name.get(i), tin.get(i), service.get(i), area.get(i), type.get(i));
         }
         return "Jason file for Providers parsed to database";
     }
