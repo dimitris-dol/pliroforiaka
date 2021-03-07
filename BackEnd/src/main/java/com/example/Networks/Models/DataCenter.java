@@ -9,7 +9,7 @@ import javax.validation.constraints.NotEmpty;
 @Entity // This tells Hibernate to make a table out of this class
 public class DataCenter {
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @NotEmpty(message = "name must not be empty")
