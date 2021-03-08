@@ -26,13 +26,12 @@ public class NetworkInputController {
     NetworkService networkService;
     private NetworkRepository networkRepository;
 
-    @RequestMapping(value = "/netinput")
+    @RequestMapping(value = "/networkinput")
     public String input() {
 
         String fileName= "C:\\Users\\jimmd\\IdeaProjects\\Networks\\BackEnd\\src\\main\\java\\com\\example\\Networks\\Files\\networks.csv";
         File file= new File(fileName);
 
-        // this gives you a 2-dimensional array of strings
         List<List<String>> lines = new ArrayList<>();
         Scanner inputStream;
 
@@ -42,7 +41,6 @@ public class NetworkInputController {
             while(inputStream.hasNext()){
                 String line= inputStream.next();
                 String[] values = line.split(",");
-                // this adds the currently parsed line to the 2-dimensional string array
                 lines.add(Arrays.asList(values));
             }
 
@@ -52,13 +50,13 @@ public class NetworkInputController {
         }
 
         List<String> type = lines.get(0);
-        List<String> shortdesc = lines.get(1);
-        List<String> material = lines.get(2);
+        List<String> penetrationRate = lines.get(1);
+        List<String> service = lines.get(2);
         List<String> tech = lines.get(3);
         List<String> owner = lines.get(4);
         List<String> admin = lines.get(5);
         for(int i=0; i<10; i++) {
-            networkService.print(type.get(i), shortdesc.get(i), material.get(i), tech.get(i), owner.get(i), admin.get(i));
+            networkService.print(type.get(i), penetrationRate.get(i), service.get(i), tech.get(i), owner.get(i), admin.get(i));
         }
         return "Jason file for Networks parsed to database";
     }

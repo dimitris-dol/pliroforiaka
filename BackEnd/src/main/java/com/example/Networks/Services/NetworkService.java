@@ -11,12 +11,12 @@ public class NetworkService {
     private NetworkRepository networkRepository;
 
     @Async
-    public void print(String type, String shortdesc, String material, String tech, String owner, String admin) {
+    public void print(String type, String penetrationRate, String service, String tech, String owner, String admin) {
 
             Network n = new Network();
             n.setType(type);
-            n.setShortdesc(shortdesc);
-            n.setMaterial(material);
+            n.setPenetrationRate(penetrationRate);
+            n.setService(service);
             n.setTech(tech);
             n.setOwner(owner);
             n.setAdmin(admin);

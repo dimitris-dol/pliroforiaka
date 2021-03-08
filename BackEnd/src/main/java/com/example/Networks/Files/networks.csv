@@ -1,6 +1,6 @@
-a,a,a,a,a,a,a,a,a,a
-a,,a,,a,,a,,,a
-a,a,a,a,a,a,a,a,a,a
-a,,a,,a,,a,,,a
-a,a,a,a,a,a,a,a,a,a
-a,,a,,a,,a,,,a
+backbone,fiber,backhaul,MAN,HUB,ADSL,VDSL,Telephone,TETRA,Point
+99%,,2%,,3%,,23%,,,2%
+Telephone,Internet,General,Telephone,Telephone,Internet,Internet,Telephone,Radio,General
+4G,,5G,,4G,,5G,,,4G
+OTE,Inalan,OTE,Government,Starlink,OTE,OTE,Government,FM,Multiple
+OTE,,OTE,,Tesla,,OTE,,,multiple

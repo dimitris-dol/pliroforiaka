@@ -16,11 +16,11 @@ public class Network {
     @NotEmpty(message = "type must not be empty")
     private String type;
 
-    @NotEmpty(message = "material must not be empty")
-    private String material;
+    @NotEmpty(message = "penetrationRate must not be empty")
+    private String penetrationRate;
 
-    @NotEmpty(message = "shortdesc must not be empty")
-    private String shortdesc;
+    @NotEmpty(message = "service must not be empty")
+    private String service;
 
     @NotEmpty(message = "tech must not be empty")
     private String tech;
@@ -50,21 +50,21 @@ public class Network {
     }
 
 
-    public String getMaterial() {
-        return material;
+    public String getPenetrationRate() {
+        return penetrationRate;
     }
 
-    public void setMaterial(String material) {
-        this.material = material;
+    public void setPenetrationRate(String penetrationRate) {
+        this.penetrationRate = penetrationRate;
     }
 
 
-    public String getShortdesc() {
-        return shortdesc;
+    public String getService() {
+        return service;
     }
 
-    public void setShortdesc(String shortdesc) {
-        this.shortdesc = shortdesc;
+    public void setService(String service) {
+        this.service = service;
     }
 
 

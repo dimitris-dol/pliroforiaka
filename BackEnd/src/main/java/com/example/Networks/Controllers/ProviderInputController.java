@@ -26,13 +26,12 @@ public class ProviderInputController {
     ProviderService providerService;
     private ProviderRepository providerRepository;
 
-    @RequestMapping(value = "/provinput")
+    @RequestMapping(value = "/providerinput")
     public String input() {
 
         String fileName= "C:\\Users\\jimmd\\IdeaProjects\\Networks\\BackEnd\\src\\main\\java\\com\\example\\Networks\\Files\\providers.csv";
         File file= new File(fileName);
 
-        // this gives you a 2-dimensional array of strings
         List<List<String>> lines = new ArrayList<>();
         Scanner inputStream;
 
@@ -42,7 +41,6 @@ public class ProviderInputController {
             while(inputStream.hasNext()){
                 String line= inputStream.next();
                 String[] values = line.split(",");
-                // this adds the currently parsed line to the 2-dimensional string array
                 lines.add(Arrays.asList(values));
             }
 

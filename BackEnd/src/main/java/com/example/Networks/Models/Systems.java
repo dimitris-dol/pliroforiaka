@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
 
 @Entity // This tells Hibernate to make a table out of this class
-public class DataCenter {
+public class Systems {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -15,14 +15,14 @@ public class DataCenter {
     @NotEmpty(message = "name must not be empty")
     private String name;
 
-    @NotEmpty(message = "shortdesc must not be empty")
-    private String shortdesc;
+    @NotEmpty(message = "network must not be empty")
+    private String network;
 
     @NotEmpty(message = "location must not be empty")
     private String location;
 
-    @NotEmpty(message = "type must not be empty")
-    private String type;
+    @NotEmpty(message = "provider must not be empty")
+    private String provider;
 
     @NotEmpty(message = "status must not be empty")
     private String status;
@@ -47,12 +47,12 @@ public class DataCenter {
     public void setName(String name){ this.name = name; }
 
 
-    public String getShortdesc(){
-        return shortdesc;
+    public String getNetwork(){
+        return network;
     }
 
-    public void setShortdesc(String shortdesc){
-        this.shortdesc = shortdesc;
+    public void setNetwork(String network){
+        this.network = network;
     }
 
 
@@ -65,12 +65,12 @@ public class DataCenter {
     }
 
 
-    public String getType(){
-        return type;
+    public String getProvider(){
+        return provider;
     }
 
-    public void setType(String type){
-        this.type = type;
+    public void setProvider(String provider){
+        this.provider = provider;
     }
 
 

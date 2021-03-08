@@ -25,7 +25,7 @@ public class Provider {
 	private String area;
 
 	@NotEmpty(message = "type must not be empty")
-	private String type;
+	private String type; //private or public sector
 
 
 	public Integer getId() {

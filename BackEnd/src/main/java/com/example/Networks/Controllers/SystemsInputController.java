@@ -20,19 +20,18 @@ import java.util.Scanner;
 
 
 @RestController
-public class DataCenterInputController {
+public class SystemsInputController {
 
     @Autowired
-    DataCenterService dataCenterService;
-    private DataCenterRepository dataCenterRepository;
+    SystemsService systemsService;
+    private SystemsRepository systemsRepository;
 
-    @RequestMapping(value = "/datacenterinput")
+    @RequestMapping(value = "/systemsinput")
     public String input() {
 
-        String fileName= "C:\\Users\\jimmd\\IdeaProjects\\Networks\\BackEnd\\src\\main\\java\\com\\example\\Networks\\Files\\datacenter.csv";
+        String fileName= "C:\\Users\\jimmd\\IdeaProjects\\Networks\\BackEnd\\src\\main\\java\\com\\example\\Networks\\Files\\systems.csv";
         File file= new File(fileName);
 
-        // this gives you a 2-dimensional array of strings
         List<List<String>> lines = new ArrayList<>();
         Scanner inputStream;
 
@@ -42,7 +41,6 @@ public class DataCenterInputController {
             while(inputStream.hasNext()){
                 String line= inputStream.next();
                 String[] values = line.split(",");
-                // this adds the currently parsed line to the 2-dimensional string array
                 lines.add(Arrays.asList(values));
             }
 
@@ -52,14 +50,14 @@ public class DataCenterInputController {
         }
 
         List<String> name = lines.get(0);
-        List<String> shortdesc = lines.get(1);
+        List<String> network = lines.get(1);
         List<String> location = lines.get(2);
-        List<String> type = lines.get(3);
+        List<String> provider = lines.get(3);
         List<String> status = lines.get(4);
         List<String> operatingDate = lines.get(5);
         for(int i=0; i<10; i++) {
-            dataCenterService.print(name.get(i), shortdesc.get(i), location.get(i), type.get(i), status.get(i), operatingDate.get(i));
+            systemsService.print(name.get(i), network.get(i), location.get(i), provider.get(i), status.get(i), operatingDate.get(i));
         }
-        return "CSV file for Data Centers parsed to database";
+        return "CSV file for Systems parsed to database";
     }
 }
