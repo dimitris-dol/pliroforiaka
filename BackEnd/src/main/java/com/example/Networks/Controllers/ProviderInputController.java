@@ -57,6 +57,6 @@ public class ProviderInputController {
         for(int i=0; i<10; i++) {
             providerService.print(name.get(i), tin.get(i), service.get(i), area.get(i), type.get(i));
         }
-        return "Jason file for Providers parsed to database";
+        return "CSV file for Providers parsed to database";
     }
 }

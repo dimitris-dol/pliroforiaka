@@ -58,6 +58,6 @@ public class NetworkInputController {
         for(int i=0; i<10; i++) {
             networkService.print(type.get(i), penetrationRate.get(i), service.get(i), tech.get(i), owner.get(i), admin.get(i));
         }
-        return "Jason file for Networks parsed to database";
+        return "CSV file for Networks parsed to database";
     }
 }
