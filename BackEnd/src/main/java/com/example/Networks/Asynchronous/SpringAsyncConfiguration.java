@@ -29,8 +29,7 @@ public class SpringAsyncConfiguration implements AsyncConfigurer {
                 System.out.println("Throwable Exception message : " + ex.getMessage());
                 System.out.println("Method name                 : " + method.getName());
                 for (Object param : params) {
-                    if(param=="")
-                    System.out.println("Parameter value that caused it       : " + param);
+                    System.out.println("Problem with adding values       : " + param);
                 }
               //  System.out.println("stack Trace ");
               //  ex.printStackTrace();
