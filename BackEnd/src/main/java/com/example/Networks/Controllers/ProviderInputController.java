@@ -11,22 +11,26 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+
 
 @RestController
+@RequestMapping(value = "/providerinput")
 public class ProviderInputController {
 
     @Autowired
     ProviderService providerService;
     private ProviderRepository providerRepository;
 
-    @RequestMapping(value = "/providerinput")
+    @GetMapping(value = "/csv")
     public String input() {
 
         String fileName= "C:\\Users\\jimmd\\IdeaProjects\\Networks\\BackEnd\\src\\main\\java\\com\\example\\Networks\\Files\\providers.csv";
@@ -49,6 +53,8 @@ public class ProviderInputController {
             e.printStackTrace();
         }
 
+
+
         List<String> name = lines.get(0);
         List<String> tin = lines.get(1);
         List<String> service = lines.get(2);
@@ -58,5 +64,24 @@ public class ProviderInputController {
             providerService.print(name.get(i), tin.get(i), service.get(i), area.get(i), type.get(i));
         }
         return "CSV file for Providers parsed to database";
+    }
+
+    @GetMapping(value = "/status")
+    public String status(){
+
+        String fileName= "C:\\Users\\jimmd\\IdeaProjects\\Networks\\BackEnd\\providers-error-log.txt";
+        String content = "";
+
+        try
+        {
+            content = new String ( Files.readAllBytes( Paths.get(fileName) ) );
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+
+        return content;
+
     }
 }

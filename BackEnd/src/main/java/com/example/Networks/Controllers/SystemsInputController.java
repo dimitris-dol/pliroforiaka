@@ -11,22 +11,26 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+
 
 @RestController
+@RequestMapping(value = "/systemsinput")
 public class SystemsInputController {
 
     @Autowired
     SystemsService systemsService;
     private SystemsRepository systemsRepository;
 
-    @RequestMapping(value = "/systemsinput")
+    @GetMapping(value = "/csv")
     public String input() {
 
         String fileName= "C:\\Users\\jimmd\\IdeaProjects\\Networks\\BackEnd\\src\\main\\java\\com\\example\\Networks\\Files\\systems.csv";
@@ -59,5 +63,24 @@ public class SystemsInputController {
             systemsService.print(name.get(i), network.get(i), location.get(i), provider.get(i), status.get(i), operatingDate.get(i));
         }
         return "CSV file for Systems parsed to database";
+    }
+
+    @GetMapping(value = "/status")
+    public String status(){
+
+        String fileName= "C:\\Users\\jimmd\\IdeaProjects\\Networks\\BackEnd\\systems-error-log.txt";
+        String content = "";
+
+        try
+        {
+            content = new String ( Files.readAllBytes( Paths.get(fileName) ) );
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+
+        return content;
+
     }
 }

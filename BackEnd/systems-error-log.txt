@@ -1,0 +1,61 @@
+Throwable Exception message : Validation failed for classes [com.example.Networks.Systems] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='network must not be empty', propertyPath=network, rootBeanClass=class com.example.Networks.Systems, messageTemplate='network must not be empty'}
+	ConstraintViolationImpl{interpolatedMessage='operatingDate must not be empty', propertyPath=operatingDate, rootBeanClass=class com.example.Networks.Systems, messageTemplate='operatingDate must not be empty'}
+	ConstraintViolationImpl{interpolatedMessage='provider must not be empty', propertyPath=provider, rootBeanClass=class com.example.Networks.Systems, messageTemplate='provider must not be empty'}
+]<br>New error found: <br>
+Problem with adding values       : Internet 
+ <br> <br> <br>Problem with adding values       :  
+ <br> <br> <br>Problem with adding values       : Greece 
+ <br> <br> <br>Problem with adding values       :  
+ <br> <br> <br>Problem with adding values       : operating 
+ <br> <br> <br>Problem with adding values       :  
+ <br> <br> <br>Throwable Exception message : Validation failed for classes [com.example.Networks.Systems] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='provider must not be empty', propertyPath=provider, rootBeanClass=class com.example.Networks.Systems, messageTemplate='provider must not be empty'}
+	ConstraintViolationImpl{interpolatedMessage='operatingDate must not be empty', propertyPath=operatingDate, rootBeanClass=class com.example.Networks.Systems, messageTemplate='operatingDate must not be empty'}
+	ConstraintViolationImpl{interpolatedMessage='network must not be empty', propertyPath=network, rootBeanClass=class com.example.Networks.Systems, messageTemplate='network must not be empty'}
+]<br>New error found: <br>
+Problem with adding values       : 5G 
+ <br> <br> <br>Problem with adding values       :  
+ <br> <br> <br>Problem with adding values       : Athens 
+ <br> <br> <br>Problem with adding values       :  
+ <br> <br> <br>Problem with adding values       : operating 
+ <br> <br> <br>Problem with adding values       :  
+ <br> <br> <br>Throwable Exception message : Validation failed for classes [com.example.Networks.Systems] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='network must not be empty', propertyPath=network, rootBeanClass=class com.example.Networks.Systems, messageTemplate='network must not be empty'}
+	ConstraintViolationImpl{interpolatedMessage='provider must not be empty', propertyPath=provider, rootBeanClass=class com.example.Networks.Systems, messageTemplate='provider must not be empty'}
+	ConstraintViolationImpl{interpolatedMessage='operatingDate must not be empty', propertyPath=operatingDate, rootBeanClass=class com.example.Networks.Systems, messageTemplate='operatingDate must not be empty'}
+]<br>New error found: <br>
+Problem with adding values       : 3G 
+ <br> <br> <br>Problem with adding values       :  
+ <br> <br> <br>Problem with adding values       : Greece 
+ <br> <br> <br>Problem with adding values       :  
+ <br> <br> <br>Problem with adding values       : operating 
+ <br> <br> <br>Problem with adding values       :  
+ <br> <br> <br>Throwable Exception message : Validation failed for classes [com.example.Networks.Systems] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='network must not be empty', propertyPath=network, rootBeanClass=class com.example.Networks.Systems, messageTemplate='network must not be empty'}
+	ConstraintViolationImpl{interpolatedMessage='operatingDate must not be empty', propertyPath=operatingDate, rootBeanClass=class com.example.Networks.Systems, messageTemplate='operatingDate must not be empty'}
+	ConstraintViolationImpl{interpolatedMessage='provider must not be empty', propertyPath=provider, rootBeanClass=class com.example.Networks.Systems, messageTemplate='provider must not be empty'}
+]<br>New error found: <br>
+Problem with adding values       : Telecommunications 
+ <br> <br> <br>Problem with adding values       :  
+ <br> <br> <br>Problem with adding values       : Greece 
+ <br> <br> <br>Problem with adding values       :  
+ <br> <br> <br>Problem with adding values       : operating 
+ <br> <br> <br>Problem with adding values       :  
+ <br> <br> <br>Throwable Exception message : Validation failed for classes [com.example.Networks.Systems] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='network must not be empty', propertyPath=network, rootBeanClass=class com.example.Networks.Systems, messageTemplate='network must not be empty'}
+	ConstraintViolationImpl{interpolatedMessage='provider must not be empty', propertyPath=provider, rootBeanClass=class com.example.Networks.Systems, messageTemplate='provider must not be empty'}
+	ConstraintViolationImpl{interpolatedMessage='operatingDate must not be empty', propertyPath=operatingDate, rootBeanClass=class com.example.Networks.Systems, messageTemplate='operatingDate must not be empty'}
+]<br>New error found: <br>
+Problem with adding values       : HUB 
+ <br> <br> <br>Problem with adding values       :  
+ <br> <br> <br>Problem with adding values       : Athens 
+ <br> <br> <br>Problem with adding values       :  
+ <br> <br> <br>Problem with adding values       : operating 
+ <br> <br> <br>Problem with adding values       :  
+ <br> <br> <br>

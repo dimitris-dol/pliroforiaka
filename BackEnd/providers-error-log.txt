@@ -1,0 +1,51 @@
+Throwable Exception message : Validation failed for classes [com.example.Networks.Provider] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='area must not be empty', propertyPath=area, rootBeanClass=class com.example.Networks.Provider, messageTemplate='area must not be empty'}
+	ConstraintViolationImpl{interpolatedMessage='TIN must not be empty', propertyPath=tin, rootBeanClass=class com.example.Networks.Provider, messageTemplate='TIN must not be empty'}
+]<br>New error found: <br>
+Problem with adding values       : Goverment 
+ <br> <br> <br>Problem with adding values       :  
+ <br> <br> <br>Problem with adding values       : General 
+ <br> <br> <br>Problem with adding values       :  
+ <br> <br> <br>Problem with adding values       : Public 
+ <br> <br> <br>Throwable Exception message : Validation failed for classes [com.example.Networks.Provider] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='TIN must not be empty', propertyPath=tin, rootBeanClass=class com.example.Networks.Provider, messageTemplate='TIN must not be empty'}
+	ConstraintViolationImpl{interpolatedMessage='area must not be empty', propertyPath=area, rootBeanClass=class com.example.Networks.Provider, messageTemplate='area must not be empty'}
+]<br>New error found: <br>
+Problem with adding values       : Vodafone 
+ <br> <br> <br>Problem with adding values       :  
+ <br> <br> <br>Problem with adding values       : Telephone 
+ <br> <br> <br>Problem with adding values       :  
+ <br> <br> <br>Problem with adding values       : Public 
+ <br> <br> <br>Throwable Exception message : Validation failed for classes [com.example.Networks.Provider] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='TIN must not be empty', propertyPath=tin, rootBeanClass=class com.example.Networks.Provider, messageTemplate='TIN must not be empty'}
+	ConstraintViolationImpl{interpolatedMessage='area must not be empty', propertyPath=area, rootBeanClass=class com.example.Networks.Provider, messageTemplate='area must not be empty'}
+]<br>New error found: <br>
+Problem with adding values       : Inalan 
+ <br> <br> <br>Problem with adding values       :  
+ <br> <br> <br>Problem with adding values       : Internet 
+ <br> <br> <br>Problem with adding values       :  
+ <br> <br> <br>Problem with adding values       : Private 
+ <br> <br> <br>Throwable Exception message : Validation failed for classes [com.example.Networks.Provider] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='TIN must not be empty', propertyPath=tin, rootBeanClass=class com.example.Networks.Provider, messageTemplate='TIN must not be empty'}
+	ConstraintViolationImpl{interpolatedMessage='area must not be empty', propertyPath=area, rootBeanClass=class com.example.Networks.Provider, messageTemplate='area must not be empty'}
+]<br>New error found: <br>
+Problem with adding values       : ETH 
+ <br> <br> <br>Problem with adding values       :  
+ <br> <br> <br>Problem with adding values       : Telephone 
+ <br> <br> <br>Problem with adding values       :  
+ <br> <br> <br>Problem with adding values       : Private 
+ <br> <br> <br>Throwable Exception message : Validation failed for classes [com.example.Networks.Provider] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='TIN must not be empty', propertyPath=tin, rootBeanClass=class com.example.Networks.Provider, messageTemplate='TIN must not be empty'}
+	ConstraintViolationImpl{interpolatedMessage='area must not be empty', propertyPath=area, rootBeanClass=class com.example.Networks.Provider, messageTemplate='area must not be empty'}
+]<br>New error found: <br>
+Problem with adding values       : Multiple 
+ <br> <br> <br>Problem with adding values       :  
+ <br> <br> <br>Problem with adding values       : General 
+ <br> <br> <br>Problem with adding values       :  
+ <br> <br> <br>Problem with adding values       : undefined 
+ <br> <br> <br>

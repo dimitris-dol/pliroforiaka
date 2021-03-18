@@ -1,0 +1,21 @@
+Throwable Exception message : Validation failed for classes [com.example.Networks.Network] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='tech must not be empty', propertyPath=tech, rootBeanClass=class com.example.Networks.Network, messageTemplate='tech must not be empty'}
+]<br>New error found: <br>
+Problem with adding values       : ADSL 
+ <br> <br> <br>Problem with adding values       : a 
+ <br> <br> <br>Problem with adding values       : Internet 
+ <br> <br> <br>Problem with adding values       :  
+ <br> <br> <br>Problem with adding values       : OTE 
+ <br> <br> <br>Problem with adding values       : a 
+ <br> <br> <br>Throwable Exception message : Validation failed for classes [com.example.Networks.Network] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='penetrationRate must not be empty', propertyPath=penetrationRate, rootBeanClass=class com.example.Networks.Network, messageTemplate='penetrationRate must not be empty'}
+]<br>New error found: <br>
+Problem with adding values       : TETRA 
+ <br> <br> <br>Problem with adding values       :  
+ <br> <br> <br>Problem with adding values       : Radio 
+ <br> <br> <br>Problem with adding values       : a 
+ <br> <br> <br>Problem with adding values       : FM 
+ <br> <br> <br>Problem with adding values       : a 
+ <br> <br> <br>
